@@ -1,0 +1,234 @@
+/*Обнуление*/
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+
+body{
+  height:100%;
+  font-family: "Raleway", Serif;
+  font-style: normal;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.wrapper{
+
+}
+
+/* хедер */
+
+.header {
+  width: 1440px;
+  margin: 0 auto;
+
+  .header__background {
+    overflow: hidden;
+  }
+
+  .header__background .container {
+    display: flex;
+  }
+
+  .header__background .background__item {
+    display: block;
+    box-sizing: border-box;
+    flex: 0 0 33.33%;
+    height: 450px;
+    position: relative;
+  }
+
+  .header__background .background__item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cover {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+  }
+
+  img{
+    filter: brightness(50%);
+  }
+}
+/* мейн */
+.main_content{
+  width: 1140px;
+  margin: 0 auto;
+}
+.main__getInfo{
+  display: flex;
+  margin: 0 auto;
+  width: 600px;
+  .getInfo__menu{
+    display: flex;
+    flex-direction: column;
+  }
+  .main__title{
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    color: #252525;
+  }
+  .getInfo__little__text{
+    font-size:16px;
+    text-align: center;
+    padding: 10px 0 10px 0;
+  }
+  .getInfo__input__and__button{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    padding: 10px 0 10px 0;
+  }
+  .getInfo__input{
+    width: 600px;
+    height: 50px;
+    border: 1px solid;
+    text-align: center;
+  }
+  .getInfo__button{
+    background: #252525;
+    width: 600px;
+    height: 50px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .for__input__main{
+    padding: 10px 0 10px 0;
+  }
+  .for__button__main{
+    padding: 10px 0 10px 0;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+}
+.main__gallery{
+  .main__title{
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    color: #252525;
+    padding: 0 8px;
+  }
+  .gallery__pics {
+    overflow: hidden;
+  }
+  .gallery__pics .container {
+    display: flex;
+  }
+  .gallery__pics .background__item {
+    display: block;
+    box-sizing: border-box;
+    flex: 0 0 25%;
+    height: 420px;
+    padding: 0 7px;
+    position: relative;
+  }
+  .gallery__pics .background__item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery__pics .background__item .label {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 7px;
+    right: 7px;
+    text-align: center;
+    color: #fff;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 10px;
+    background-color: rgba(226, 199, 178, 0.6);
+    transition: background-color 0.15s;
+  }
+  .gallery__pics .background__item:hover .label {
+    background: #252525;
+  }
+}
+
+
+/* футер */
+.footer{
+  width: 100%;
+  margin: 0 auto;
+
+}
+.footer__columns{
+  display: flex;
+  margin: 0 auto;
+  width: 1140px;
+  padding: 10px 0 0 0;
+  background: #ffffff;
+}
+.footer__listPics{
+  line-height: 1.5;
+}
+.columns__column{
+  flex: 0 1 25%;
+  padding: 0px 8px;
+  margin: 0px 0px 30px 0px;
+  li{
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.5;
+    /* identical to box height */
+    color: #252525;
+  }
+  list__listPics{
+    align-items: flex-start;
+  }
+}
+.footer__bottom{
+  background: #ffffff;
+  margin: 0 auto;
+  width: 1140px;
+  .bottom__tittle{
+    font-size: 12px;
+    padding: 10px 0 10px 0;
+
+  }
+}
+.footer__title{
+  font-weight: 300;
+  font-size: 20px;
+  color: #252525;
+  padding: 0 0 20px 0;
+}
+.bottom__tittle{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
