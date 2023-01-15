@@ -6,18 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+    <title>Yanki |Home|</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
 <body>
     <div class="header">
-        <div class="container">
-            <div class="header__nav__bar">
-                    <div class="container__for__nav__bar">
+        <div class="header_container">
+            <nav class="header__nav__bar">
+                <div class="container__for__nav__bar">
                         <a href="#" class="nav__bar__pics header__sub__menu"><img alt="" src="pictures_for_main\sub-menu.png"/></a>
                         <div class="nav__bar__left__corner__group">
                             <a href="#" class="nav__bar__text" >new</a>
-                            <a href="#" class="nav__bar__text" >catalog</a>
+                            <a href="\pages\catalog.html" class="nav__bar__text" >catalog</a>
                             <a href="#" class="nav__bar__text" >about us</a>
                         </div>
                         <a href="#" class="nav__bar__pics header__main__logo"><img alt="" src="pictures_for_main\YANKI.png"/></a>
@@ -34,65 +34,69 @@
                             <a href="#" class="nav__bar__pics "><img alt="" src="pictures_for_main\trash_icon.png"/></a>
                         </div>
                     </div>
-            </div>
-            <div class="header__background">
-                    <div class="container">
-                        <div class="background__item" >
-                            <img alt="Перша" src="pictures_for_main\file.jpg" />
+                <div class="header__go__another__page">
+                <p class="go__another__page__title">new collection</p>
+                <hr>
+                <p class="go__another__page__link">go watch it</p>
+                </div>
+            </nav>
+            <div class="header__imgs">
+                <div class="container">
+                    <div class="header__img">
+                        <div class=" header__img_2" >
+                            <img alt="Перша" src="pictures_for_main\sun.jpg" />
                         </div>
-                        <div class="background__item" >
+                        <div class=" header__img_1" >
                             <img alt="Друга" src="pictures_for_main\jannaDArk.jpg" />
                         </div>
-                        <div class="background__item" >
+                        <div class=" header__img_3" >
                             <img alt="Третя" src="pictures_for_main\moongirl.png" />
                         </div>
                     </div>
-            </div>
-            <div class="header__go__another__page">
-            <p class="go__another__page__title">new collection</p>
-            <hr>
-            <p class="go__another__page__link">go watch it</p>
+                </div>
+
             </div>
         </div>
     </div>
     <div class="main_content">
         <div class="container">
             <div class="main__gallery">
-                <p class="main__title">Categories</p>
+                <h1 class="main__title">Categories</h1>
                 <div class="gallery__pics">
-                    <div class="container buttons__location">
-                    <button class="slider__buttons square " type="slider__left">
-                        <img class="left__button" src="pictures_for_main\toLeft.png" alt="slider left" />
-                    </button>
-                    <button class="slider__buttons square " type="slider__right">
-                        <img class="right__button" src="pictures_for_main\toRight.png" alt="slider right"  />
-                    </button>
-                    </div>
                     <div class="container">
-                        <a class="background__item" id="1" href="#">
-                            <img alt="Перша" src="pictures_for_main\angel.jpg" />
-                            <span class="label">Fallen valkiria...</span>
-                        </a>
-                        <a class="background__item" id="2" href="#">
-                            <img alt="Друга" src="pictures_for_main\sunflower_heart.jpg" />
-                            <span class="label">Sun in her heart...</span>
-                        </a>
-                        <a class="background__item" id="3" href="#">
-                            <img alt="Третя" src="pictures_for_main\who.jpg" />
-                            <span class="label">Who is she...?</span>
-                        </a>
-                        <a class="background__item" id="4" href="#">
-                            <img alt="Четверта" src="pictures_for_main\cat.jpg" />
-                            <span class="label">Devil cat...</span>
-                        </a>
-
+                        <div class="buttons__location">
+                            <button class="slider__buttons square " type="slider__left">
+                                <img class="left__button" src="pictures_for_main\toLeft.png" alt="slider left" />
+                            </button>
+                            <button class="slider__buttons square " type="slider__right">
+                                <img class="right__button" src="pictures_for_main\toRight.png" alt="slider right"  />
+                            </button>
+                        </div>
+                        <div class="slider__container">
+                            <a class="background__item slider_1" id="1" href="#">
+                                <img alt="Перша" src="pictures_for_main\angel.jpg" />
+                                <span class="label">Fallen valkiria...</span>
+                            </a>
+                            <a class="background__item slider_2" id="2" href="#">
+                                <img alt="Третя" src="pictures_for_main\who.jpg" />
+                                <span class="label">Who is she...?</span>
+                            </a>
+                            <a class="background__item slider_3" id="3" href="#">
+                                <img alt="Друга" src="pictures_for_main\sunflower_heart.jpg" />
+                                <span class="label">Sun in her heart...</span>
+                            </a>
+                            <a class="background__item slider_4" id="4" href="#">
+                                <img alt="Четверта" src="pictures_for_main\cat.jpg" />
+                                <span class="label">Devil cat...</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="main__getInfo">
                 <div class="container">
                     <div class="getInfo__menu">
-                        <p class="main__title">Find out everything first</p>
+                        <h1 class="main__title">Find out everything first</h1>
                         <div class="getInfo__input__and__button">
                             <div class="for__input__main">
                                 <input class="getInfo__input" type = "text"  name = "firstname" value = "Your e-mail@*" >
@@ -111,46 +115,38 @@
         <div class="container">
             <div class="footer__columns">
                 <div class="columns__column">
-                    <p class="footer__title">Company</p>
-                    <nav class="footer__list">
-                        <ul>
+                    <h2 class="footer__title">Company</h2>
+                    <ul class="footer__list">
                             <li>About us</li>
                             <li>Contacts</li>
-                        </ul>
-                    </nav>
+                    </ul>
                 </div>
                 <div class="columns__column">
-                    <p class="footer__title">USEFUL</p>
-                    <nav class="footer__list">
-                        <ul>
+                    <h2 class="footer__title">USEFUL</h2>
+                    <ul class="footer__list">
                             <li>Payment and delivery</li>
                             <li>Return conditions</li>
                             <li>Bonus system</li>
-                        </ul>
-                    </nav>
+                    </ul>
                 </div>
                 <div class="columns__column">
-                    <p class="footer__title">FOR CUSTOMERS</p>
-                    <nav class="footer__list">
-                        <ul>
+                    <h2 class="footer__title">FOR CUSTOMERS</h2>
+                    <ul class="footer__list">
                             <li>FAVOURITE</li>
                             <li>Public offer</li>
                             <li>Privacy policy</li>
-                        </ul>
-                    </nav>
+                    </ul>
                 </div>
                 <div class="columns__column">
-                    <p class="footer__title">CONTACTS</p>
+                    <h2 class="footer__title">CONTACTS</h2>
                     <div class="footer__listPics">
                         <img src="pictures_for_main\instagram_logo.png">
                         <img src="pictures_for_main\telegram_logo.png">
                     </div>
-                    <nav class="footer__list">
-                        <ul>
+                    <ul class="footer__list">
                             <li>+38(073) 096 36 44</li>
                             <li>info@yanki.com</li>
-                        </ul>
-                    </nav>
+                    </ul>
                 </div>
             </div>
             <div class="footer__bottom">
