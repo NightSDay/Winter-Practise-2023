@@ -50,10 +50,27 @@ body{
     margin: 0 auto;
   }
   .nav__bar__right__corner__group{
-    img{
-      max-width: 100%;
-      max-height: 20px;
+    overflow: hidden;
+    display: flex;
+    .container{
+      display: flex;
     }
+    .nav__bar__pics{
+      box-sizing: border-box;
+      max-height: 25px;
+      position: relative;
+    }
+    img{
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    a{
+      padding: 0 8px 0 8px;
+    }
+
+
   }
   .nav__bar__text{
     font-style: normal;
@@ -62,35 +79,29 @@ body{
     @include adaptiv-font(18,16);
     color: $background-color;
   }
-
   .header__nav__bar{
     display: flex;
     margin: 0 auto;
     flex-direction: column;
     align-items: center;
   }
-  .nav__bar__right__corner__group{
-    a{
-      padding: 0 8px 0 8px;
-    }
-  }
   .nav__bar__language__group{
     .img_sub__language__menu{
       padding:6px 12px 0 5px;
-
-
     }
   }
   .nav__bar__left__corner__group{
+
     a{
       padding: 0 20px 0 0;
     }
-
   }
   .header__main__logo{
     img{
+      max-width: 158px;
       max-height: 40px;
-      max-width: 100%;
+      height: 100%;
+      width: 100%;
     }
   }
   .header__sub__menu{}
@@ -160,7 +171,7 @@ body{
     }
   }
   */
-.header__imgs {
+  .header__imgs {
   overflow: hidden;
   .container {
     display: flex;
@@ -175,7 +186,8 @@ body{
     }
     img {
       display: block;
-      max-width: 100%;
+      max-width: 480px;
+      width: 100%;
       max-height: 900px;
       object-fit: cover;
       filter: brightness(40%);
@@ -193,10 +205,14 @@ body{
       max-height: $header-background-height;
       position: relative;
     }
+
   }
   @media (max-width: 500px) {
     .header__img_3 {
       display: none;
+    }
+    .header__img_1 {
+      width: 375px;
     }
     .background__item{
       display: block;
@@ -208,6 +224,50 @@ body{
 
   }
 }
+
+  @media (max-width: 950px) {
+    .search{
+      display: none;
+    }
+    .nav__bar__right__corner__group{
+      img{
+        max-width: 25px;
+        width: 100%;
+
+      }
+    }
+
+  }
+  @media (max-width: 770px) {
+    .class__UAH,class__about{
+      display: none;
+    }
+  }
+  @media (max-width: 770px) {
+    .class__about{
+      display: none;
+    }
+  }
+  @media (max-width: 650px) {
+    .class__catalog{
+      display: none;
+    }
+  }
+  @media (max-width: 555px) {
+    .profile_icon{
+      display: none;
+    }
+    img{
+      max-width: 20px;
+      width: 100%;
+
+    }
+    .class__new{
+      display: none;
+
+    }
+  }
+
 }
 
 /* мейн */
@@ -218,28 +278,31 @@ body{
     display: flex;
     margin: 0 auto;
     max-width: 600px;
+    width: 100%;
     .getInfo__menu{
       display: flex;
       flex-direction: column;
+      max-width: 600px;
+      width: 100%;
     }
     .getInfo__little__text{
       @include adaptiv-font($font-main-casual-text-size,14);
       text-align: center;
-      padding: 10px 0 100px 0;
     }
     .getInfo__input__and__button{
       display: flex;
       align-self: center;
       flex-direction: column;
       max-width: 600px;
-      max-height: 50px;
+      max-height: 120px;
       width:100%;
       height: 100%;
-      padding: 10px 0 10px 0;
     }
     .getInfo__input{
       max-width: 600px;
       max-height: 50px;
+      width:100%;
+      height: 100%;
       border: 1px solid;
       text-align: center;
     }
@@ -247,7 +310,8 @@ body{
       background: $mane-dark-color;
       max-width: 600px;
       max-height: 50px;
-      width: 100%;
+      width:100%;
+      height: 100%;
       font-style: normal;
       font-weight: 300;
       @include adaptiv-font($font-main-casual-text-size,14);
@@ -256,10 +320,16 @@ body{
       color: $background-color;
     }
     .for__input__main{
-      padding: 10px 0 10px 0;
+      max-width: 600px;
+      max-height: 50px;
+      width:100%;
+      height: 100%;
     }
     .for__button__main{
-      padding: 10px 0 10px 0;
+      max-width: 600px;
+      max-height: 50px;
+      width:100%;
+      height: 100%;
       font-style: normal;
       font-weight: 300;
       text-align: center;
@@ -270,7 +340,6 @@ body{
       text-align: center;
       font-weight: 300;
       color: $mane-dark-color;
-      padding: 100px 0 50px 0;
       @include adaptiv-font(36,24);
     }
   }
@@ -406,6 +475,7 @@ body{
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 100px;
   .footer__columns{
     display: flex;
     margin: 0 auto;

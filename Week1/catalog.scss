@@ -22,7 +22,12 @@ $mane-dark-color: #252525;
 $font-main-title-size: 36px;
 $font-main-casual-text-size: 16px;
 
-
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
 body{
   height:100%;
   font-family: "Raleway", Serif;
@@ -35,29 +40,35 @@ body{
 .header {
   width: 1440px;
   margin: 0 auto;
+  .header_container{
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   .nav__bar__right__corner__group{
+    display: flex;
     img{
-      height: 20px;
+      max-width: 23px;
+      max-height: 23px;
+      height: 100%;
+      width: 100%;
+    }
+    a{
+      padding: 0 8px 0 8px;
     }
   }
   .nav__bar__text{
     font-style: normal;
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 21px;
+    @include adaptiv-font(18,16);
     color: $mane-dark-color;
 
   }
   .header__nav__bar{
     display: flex;
     margin: 0 auto;
-    justify-content: center;
-  }
-  .nav__bar__right__corner__group{
-    a{
-      padding: 0 8px 0 8px;
-    }
+    flex-direction: column;
+    align-items: center;
   }
   .nav__bar__language__group{
     .img_sub__language__menu{
@@ -69,17 +80,26 @@ body{
       padding: 0 20px 0 0;
     }
   }
-  .header__main__logo{}
+  .header__main__logo{
+    img{
+    max-width: 158px;
+    max-height: 40px;
+    height: 100%;
+    width: 100%;
+    }
+  }
   .header__sub__menu{}
   .container__for__nav__bar{
     display: flex;
     margin: 0 auto;
-    width: $content-width;
+    max-width: $content-width;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 34px 0 34px 0;
+    position: absolute;
+    z-index: 1;
   }
-
 }
 
 /* мейн */
@@ -100,8 +120,10 @@ body{
 
 /* футер */
 .footer{
+  max-width: 1140px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 100px;
   .footer__columns{
     display: flex;
     margin: 0 auto;
@@ -130,7 +152,8 @@ body{
   .footer__bottom{
     background: $background-color;
     margin: 0 auto;
-    width: $content-width;
+    max-width: $content-width;
+    width: 100%;
     .bottom__tittle{
       font-size: 12px;
       padding: 10px 0 10px 0;
