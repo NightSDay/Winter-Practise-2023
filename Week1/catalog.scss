@@ -48,12 +48,18 @@ body{
     padding: 0 10px;
   }
   .nav__bar__right__corner__group{
+    overflow: hidden;
     display: flex;
     img{
       max-width: 23px;
       max-height: 23px;
       height: 100%;
       width: 100%;
+    }
+    .nav__bar__pics{
+      box-sizing: border-box;
+      max-height: 25px;
+      position: relative;
     }
     a{
       padding: 0 8px 0 8px;
@@ -65,13 +71,11 @@ body{
     font-weight: 300;
     @include adaptiv-font(18,16);
     color: $mane-dark-color;
-
-
   }
   .nav__bar__language__group{
-    a:after{
+    .nav__bar__text:after:after{
       padding: 8px 9px;
-      content: url("/Week1/pictures_for_catalog/header-arrow-down.png");
+      content: url("/Week1/pictures_for_main/arrow_down.png");
     }
   }
   .nav__bar__left__corner__group{
@@ -96,9 +100,26 @@ body{
     padding: 34px 10px 34px 10px;
   }
 
-  @media (max-width: 1100px) {
+  @media  (max-width: 950px) {
+    .search{
+      display: none;
+    }
+    .class__UAH{
+      display: none;
+    }
+    .class__about{
+      display: none;
+    }
+    .class__catalog{
+      display: none;
+    }
+    .profile_icon{
+      display: none;
+    }
+    .class__new{
+      display: none;
 
-
+    }
   }
 }
 

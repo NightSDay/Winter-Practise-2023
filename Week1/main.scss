@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Icons";
+  src: url("./fonts/icons.woff") format("woff");
+}
+
 /*Обнуление*/
 *{padding:0;margin:0;border:0;}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
@@ -42,11 +47,12 @@ body{
 }
 /*банер*/
 .banner {
-  max-width:1440px;
+  width: 100%;
   margin: auto;
   position: relative;
   .container {
-    display: flex;
+    width: 100%;
+    overflow: hidden;
     position: relative;
   }
   .banner__img{
@@ -68,8 +74,9 @@ body{
   }
   .header__go__another__page{
     position: absolute;
-    left:35%;
     top:40%;
+    left: 0;
+    right: 0;
     text-align: center;
     .go__another__page__title{
       font-style: normal;
@@ -105,10 +112,17 @@ body{
     }
   }
 }
+
 /* хедер */
 .header {
+
   max-width: 1440px;
   margin: 0 auto;
+  .header__sub__menu{
+    font-family: Icons;
+    @include adaptiv-font(18,16);
+    color: $background-color;
+  }
   .header_container{
     max-width: 1440px;
     margin: 0 auto;
@@ -116,21 +130,19 @@ body{
   .nav__bar__right__corner__group{
     overflow: hidden;
     display: flex;
+    font-family: Icons;
     .container{
       display: flex;
     }
     .nav__bar__pics{
       box-sizing: border-box;
-      max-height: 25px;
       position: relative;
     }
-    img{
-      display: block;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+
     a{
+      @include adaptiv-font(18,16);
+      color: $background-color;
+      text-decoration:none ;
       padding: 0 8px 0 8px;
     }
 
@@ -150,12 +162,16 @@ body{
     align-items: center;
   }
   .nav__bar__language__group{
+    padding: 0 10px;
     .img_sub__language__menu{
       padding:6px 12px 0 5px;
     }
     .nav__bar__text:after{
       padding: 8px 9px;
-      content: url("/Week1/pictures_for_main/arrow_down.png");
+      font-family: Icons;
+      text-transform: none;
+      @include adaptiv-font(15,13);
+      content: "arrow-down";
     }
   }
   .nav__bar__left__corner__group{
@@ -164,15 +180,9 @@ body{
     }
   }
   .header__main__logo{
-    img{
-      max-width: 158px;
-      max-height: 40px;
-      height: 100%;
-      width: 100%;
-    }
+    width: 195px;
+    color: white;
   }
-  .header__sub__menu{}
-
   .container__for__nav__bar{
     display: flex;
     margin: 0 auto;
@@ -185,18 +195,11 @@ body{
     z-index: 1;
 
   }
-
   @media (max-width: 950px) {
     .search{
       display: none;
     }
-    .nav__bar__right__corner__group{
-      img{
-        max-width: 25px;
-        width: 100%;
 
-      }
-    }
     .class__UAH{
       display: none;
     }
@@ -215,9 +218,20 @@ body{
     }
   }
   @media (max-width: 555px) {
-    .nav__bar__right__corner__group.container.nav__bar__pics.img{
-      width: 20px;
-      height: 20px;
+    .group1{
+      order: 1;
+    }
+    .group2{
+      order: 2;
+    }
+    .group3{
+      order: 4;
+    }
+    .group4{
+      order: 3;
+    }
+    .group5{
+      order: 5;
     }
   }
 }
@@ -226,6 +240,7 @@ body{
 .main_content{
   display: flex;
   margin: 0 auto;
+  padding: 0 20px;
   .main__getInfo{
     margin: 0 auto;
     .container{
@@ -333,6 +348,9 @@ body{
       height: 40px;
       margin-top: -20px;
       background-color: $mane-dark-color;
+       font-family: Icons;
+       text-transform: none;
+       color: #FFFFFF;
     }
     .next {
       right: 20px;
@@ -363,6 +381,12 @@ body{
   justify-content: center;
   flex-direction: column;
   padding-top: 100px;
+  .footer__column__pics{
+    font-family: Icons;
+    text-transform: none;
+    @include adaptiv-font(18,16);
+    color: #E0BEA2;
+  }
   &__body {
     max-width: $content-width;
     margin: 0 auto;
