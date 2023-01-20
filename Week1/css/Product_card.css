@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "Icons";
+  src: url("../fonts/icons.woff") format("woff");
+}
+body {
+  height: 100%;
+  font-family: "Raleway", Serif;
+  font-style: normal;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-width: 100%;
+}
+
+.main .container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+.main .main__bar__way {
+  margin: 0;
+  padding: 0 0 15px 10px;
+}
+.main .main__bar__way a {
+  text-decoration: none;
+  color: #252525;
+}
+.main .main__bar__way a:after {
+  padding: 8px 9px;
+  font-family: Icons;
+  text-transform: none;
+  font-size: calc(10px + 2 * ((100vw - 375px) / 1065));
+  content: "arrow-right";
+  color: #E0BEA2;
+}
+.main .main__content .container {
+  display: flex;
+  flex-direction: column;
+}
+.main .main__content .container .card-field .container {
+  display: flex;
+  flex-direction: row;
+}
+.main .main__content .container .card-field .container .card-field__images {
+  flex: 0 0 50%;
+}
+.main .main__content .container .card-field .container .card-field__information {
+  flex: 0 0 50%;
+}
+
+/*# sourceMappingURL=Product_card.css.map */

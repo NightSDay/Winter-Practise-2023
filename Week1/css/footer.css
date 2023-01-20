@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* футер */
+@font-face {
+  font-family: "Icons";
+  src: url("../fonts/icons.woff") format("woff");
+}
+.footer {
+  color: #252525;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px;
+}
+.footer .footer__column__pics {
+  font-family: Icons;
+  text-transform: none;
+  font-size: calc(16px + 2 * ((100vw - 375px) / 1065));
+  color: #E0BEA2;
+}
+.footer__body {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 10px;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__column {
+  max-width: 250px;
+  width: 100%;
+  align-items: center;
+}
+.footer__column__title {
+  text-transform: uppercase;
+  line-height: 23.48px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+.footer__row {
+  font-size: 16px;
+  line-height: 19px;
+}
+.footer__row li {
+  margin: 10px 0;
+}
+.footer__bottom {
+  display: flex;
+  margin: 0 auto;
+}
+.footer__copyright {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  width: 100%;
+  margin: 50px 0 10px;
+}
+.footer a {
+  text-decoration: none;
+  color: #252525;
+}
+@media (max-width: 768px) {
+  .footer .footer__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

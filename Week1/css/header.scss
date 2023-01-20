@@ -1,0 +1,134 @@
+/* футер */
+@font-face {
+  font-family: "Icons";
+  src: url("../fonts/icons.woff") format("woff");
+}
+
+$content-width: 1140px;
+$background-color: #FFFFFF ;
+$mane-dark-color: #252525;
+$font-main-title-size: 36px;
+$font-main-casual-text-size: 16px;
+
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+/* хедер */
+.header {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  .header__sub__menu{
+    font-family: Icons;
+    @include adaptiv-font(18,16);
+    color: #E0BEA2;
+  }
+  .header_container{
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .nav__bar__right__corner__group{
+    overflow: hidden;
+    display: flex;
+    font-family: Icons;
+    .container{
+      display: flex;
+    }
+    .nav__bar__pics{
+      box-sizing: border-box;
+      position: relative;
+    }
+    a{
+      font-family: Icons;
+      @include adaptiv-font(18,16);
+      color: #E0BEA2;
+      padding: 0 8px 0 8px;
+    }
+  }
+  .nav__bar__text{
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 300;
+    @include adaptiv-font(18,16);
+    color: $mane-dark-color;
+  }
+  .header__nav__bar{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav__bar__language__group{
+    padding: 0 10px;
+    .img_sub__language__menu{
+      padding:6px 12px 0 5px;
+    }
+    .nav__bar__text:after{
+      padding: 8px 9px;
+      font-family: Icons;
+      text-transform: none;
+      @include adaptiv-font(15,13);
+      content: "arrow-down";
+    }
+  }
+  .nav__bar__left__corner__group{
+    a{
+      padding: 0 20px 0 0;
+    }
+  }
+  .header__main__logo{
+    width: 195px;
+    color: #E0BEA2;
+  }
+  .container__for__nav__bar{
+    display: flex;
+    margin: 0 auto;
+    max-width: $content-width;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px 10px 34px 10px;
+
+  }
+  @media (max-width: 950px) {
+    .search{
+      display: none;
+    }
+    .class__UAH{
+      display: none;
+    }
+    .class__about{
+      display: none;
+    }
+    .class__catalog{
+      display: none;
+    }
+    .profile_icon{
+      display: none;
+    }
+    .class__new{
+      display: none;
+
+    }
+  }
+  @media (max-width: 555px) {
+    .group1{
+      order: 1;
+    }
+    .group2{
+      order: 2;
+    }
+    .group3{
+      order: 4;
+    }
+    .group4{
+      order: 3;
+    }
+    .group5{
+      order: 5;
+    }
+  }
+}

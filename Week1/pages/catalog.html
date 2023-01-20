@@ -5,67 +5,370 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="\Week1\catalog.css">
+    <link rel="stylesheet" href="../css/catalog.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/FullNull.css">
+    <link rel="stylesheet" href="../css/header.css">
     <title>Catalog</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
 <body>
-<div class="header">
-    <div class="header-container">
-        <div class="header__nav__bar">
+<header class="header">
+    <div class="header_container">
+        <nav class="header__nav__bar">
             <div class="container__for__nav__bar">
-                <a href="#" class="nav__bar__pics header__sub__menu"><img alt="" src="..\pictures_for_catalog\sub-menu.png"/></a>
-                <div class="nav__bar__left__corner__group">
-                    <a href="#" class="nav__bar__text" >new</a>
-                    <a href="\pages\catalog.html" class="nav__bar__text" >catalog</a>
-                    <a href="#" class="nav__bar__text" >about us</a>
+                <a href="#" class="nav__bar__pics header__sub__menu group1">menu</a>
+                <div class="nav__bar__left__corner__group group2">
+                    <a href="#" class="nav__bar__text class__new" >new</a>
+                    <a href="../pages/catalog.html" class="nav__bar__text class__catalog" >catalog</a>
+                    <a href="#" class="nav__bar__text class__about" >about us</a>
                 </div>
-                <a href="#" class="nav__bar__pics header__main__logo"><img alt="" src="..\pictures_for_catalog\Yanki.png"/></a>
-                <div class="nav__bar__language__group">
+                <a href="#" class="nav__bar__pics header__main__logo group3">
+                    <svg width="159" height="40" viewBox="0 0 159 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.33803 0L17.4085 21.5211L30.5915 0H34.8732L19.3803 25.1268V40H15.4366V25.0141L0 0H4.33803Z" />
+                        <path d="M48.7474 0H52.0713L68.691 40H64.522L59.3389 27.493H41.3671L36.2403 40H32.015L48.7474 0ZM58.4375 24.3944L50.3812 4.61972L42.2121 24.3944H58.4375Z" />
+                        <path d="M78.3688 7.26761V40H74.4252V0H77.6928L103.946 33.3521V0.0563369H107.89V40H104.228L78.3688 7.26761Z" />
+                        <path d="M117.944 40V0.0563369H121.888V23.2676L143.916 0H148.254L131.916 17.5775L149.099 40H144.648L129.381 19.9437L121.888 27.7183V40H117.944Z" />
+                        <path d="M154.146 40V0H158.089V40H154.146Z" />
+                    </svg>
+                </a>
+                <div class="nav__bar__language__group group4">
                     <a href="#" class="nav__bar__text" >ru</a>
                     <a href="#" class="nav__bar__text class__UAH" >uah</a>
                 </div>
-                <div class="nav__bar__right__corner__group">
-                    <a href="#" class="nav__bar__pics search"><img  alt="search" src="..\pictures_for_catalog\search-header.png"/></a>
-                    <a href="#" class="nav__bar__pics profile_icon"><img alt="profile" src="..\pictures_for_catalog\profile-header.png"/></a>
-                    <a href="#" class="nav__bar__pics "><img alt="like_icon" src="..\pictures_for_catalog\heart-header.png"/></a>
-                    <a href="#" class="nav__bar__pics "><img alt="cart_icon" src="..\pictures_for_catalog\cart-header.png"/></a>
+                <div class="nav__bar__right__corner__group group5">
+                    <div class="container">
+                        <a href="#" class="nav__bar__pics search">search</a>
+                        <a href="#" class="nav__bar__pics profile_icon">profile</a>
+                        <a href="#" class="nav__bar__pics ">heart</a>
+                        <a href="#" class="nav__bar__pics ">cart</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
     </div>
-</div>
+</header>
+
 <div class="main">
     <div class="container">
-        <div class="main__left__menu__bar">
-            <div class="container__for__left__menu__bar">
-                <div class="left__menu__bar__way">
-                    <a href="\Week1\main.html">Home page</a>
-                    <img src="\Week1\pictures_for_catalog\arrow-to-right.png">
-                    <a href="catalog.html">Catalog</a>
-                </div>
-                <div class="left__menu__bar__list__menu">
-                    <p>Catalog</p>
-                    <ul>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                        <li>*******</li>
-                    </ul>
+        <div class="menu__bar__way">
+        <a href="/Week1/index.html">Home page</a>
+        <a href="catalog.html">Catalog</a>
+        </div>
+        <div class="main__block">
+            <div class="main__left__menu__bar">
+                    <div class="container__list__menu">
+                        <div class="catalog">Catalog</div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a>New</a>
+                                </li>
+                                <li>
+                                    <a>Bestsellers</a>
+                                </li>
+                                <li>
+                                    <a>Oil</a>
+                                </li>
+                                <li>
+                                    <a>Realism</a>
+                                </li>
+                                <li>
+                                    <a>Photo realism</a>
+                                </li>
+                                <li>
+                                    <a>Expressionism</a>
+                                </li>
+                                <li>
+                                    <a>Impressionism</a>
+                                </li>
+                                <li>
+                                    <a>Abstract</a>
+                                </li>
+                                <li>
+                                    <a>Surrealism</a>
+                                </li>
+                                <li>
+                                    <a>Pop Art</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+            <div class="main__right__field">
+                <div class="container">
+                    <div class="right__field__filters">
+                        <div class="container">
+                            <div class="filter__not__compressed">
+                                <a href="#" class="filter" >Size</a>
+                                <a href="#" class="filter" >Color</a>
+                                <a href="#" class="filter" >Price</a>
+                                <a href="#" class="filter" >Sort by</a>
+                            </div>
+                            <div class="filter__compressed">
+                                <div class="filter__title">Filter</div>
+                                <div class="arrow_down">arrow-down</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right__field__products">
+                        <div class="product__cards__container">
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img"><img src="../pictures_for_catalog/angels-heaven.jpg" alt="1"></div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Angels heaven<span class="product__new">new</span></div>
+                                    <div class="product__price">4400 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img">
+                                    <img src="../pictures_for_catalog/butterfly-head.jpg" alt="1">
+                                </div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Butterflies in head.. <span class="product__new">new</span></div>
+                                    <div class="product__price">2900 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img">
+                                    <img src="../pictures_for_catalog/flowers.jpg" alt="1">
+                                </div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Flower estethic <span class="product__new">new</span></div>
+                                    <div class="product__price">1900 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img">
+                                    <img src="../pictures_for_catalog/green-eyes.jpg" alt="1">
+                                </div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Your green eyes.. <span class="product__new">new</span></div>
+                                    <div class="product__price">10 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img">
+                                    <img src="../pictures_for_catalog/lesbian.jpg" alt="1">
+                                </div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Forbidden kiss <span class="product__new">new</span></div>
+                                    <div class="product__price">2900 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img"><img src="../pictures_for_catalog/lying-in-water.jpg" alt="1"></div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Relaxing in the water <span class="product__new">new</span></div>
+                                    <div class="product__price">2900 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img"><img src="../pictures_for_catalog/memories.jpg" alt="1"></div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Gallery of memories <span class="product__new">new</span></div>
+                                    <div class="product__price">3000 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img"><img src="../pictures_for_catalog/protection.jpg" alt="1"></div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Protect the Queen <span class="product__new">new</span></div>
+                                    <div class="product__price">2000 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img"><img src="../pictures_for_catalog/triple-head.jpg" alt="1"></div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Visage <span class="product__new">new</span></div>
+                                    <div class="product__price">1000 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card product">
+                                <div class="like">heart</div>
+                                <div class="product__img"><img src="../pictures_for_catalog/water-mares.jpg" alt="1"></div>
+                                <div class="product__description__panel">
+                                    <div class="product__name">Ghosted sea <span class="product__new">new</span></div>
+                                    <div class="product__price">4010 грн</div>
+                                    <div class="product__available__size">
+                                        <ul>
+                                            <li><a href="#">XXS</a></li>
+                                            <li><a href="#">XS</a></li>
+                                            <li><a href="#">S</a></li>
+                                            <li><a href="#">M</a></li>
+                                            <li><a href="#">L</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__color">
+                                        <ul>
+                                            <li><a href="#" class="white"></a></li>
+                                            <li><a href="#" class="blue"></a></li>
+                                            <li><a href="#" class="yellow"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="main__right__field"></div>
     </div>
 </div>
+
 <footer class="footer">
     <div class="footer__body">
         <div class="footer__container">
@@ -112,8 +415,8 @@
                 <h3 class="footer__column__title">Контакти</h3>
                 <ul class="footer__row">
                     <li>
-                        <a href="#"><img src="..\pictures_for_catalog\instagram_logo.png" alt="instagram"></a>
-                        <a href="#"><img src="..\pictures_for_catalog\telegram_logo.png" alt="telegram"></a>
+                        <a href="#" class="footer__column__pics">inst-logo</a>
+                        <a href="#" class="footer__column__pics">telegram-logo</a>
                     </li>
                     <li>
                         +38(067) 096 36 44

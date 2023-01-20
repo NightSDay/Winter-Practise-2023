@@ -1,0 +1,226 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Icons";
+  src: url("../fonts/icons.woff") format("woff");
+}
+body {
+  height: 100%;
+  font-family: "Raleway", Serif;
+  font-style: normal;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 100%;
+}
+
+/* мейн */
+.main .container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+.main .menu__bar__way {
+  margin: 0;
+  padding: 0 0 15px 10px;
+}
+.main .menu__bar__way a {
+  text-decoration: none;
+  color: #252525;
+}
+.main .menu__bar__way a:after {
+  padding: 8px 9px;
+  font-family: Icons;
+  text-transform: none;
+  font-size: calc(10px + 2 * ((100vw - 375px) / 1065));
+  content: "arrow-right";
+  color: #E0BEA2;
+}
+.main .main__block {
+  display: flex;
+}
+.main .main__block .main__left__menu__bar {
+  flex: 0 0 15.1515%;
+}
+.main .main__block .main__left__menu__bar .container__list__menu {
+  padding: 15px 0 0 10px;
+}
+.main .main__block .main__left__menu__bar .container__list__menu .catalog {
+  font-size: calc(18px + 2 * ((100vw - 375px) / 1065));
+  padding-bottom: 10px;
+}
+.main .main__block .main__left__menu__bar .container__list__menu .list {
+  font-size: calc(15px + 1 * ((100vw - 375px) / 1065));
+}
+.main .main__block .main__left__menu__bar .container__list__menu .list li {
+  margin: 20px 0;
+}
+.main .main__right__field {
+  flex: 0 0 84.8485%;
+  width: 100%;
+  padding: 0 10px;
+}
+.main .main__right__field .right__field__filters {
+  padding: 15px 0 30px 0;
+}
+.main .main__right__field .right__field__filters .filter:after {
+  padding: 8px 9px;
+  font-family: Icons;
+  text-transform: none;
+  font-size: calc(10px + 2 * ((100vw - 375px) / 1065));
+  content: "arrow-down";
+  color: #E0BEA2;
+}
+.main .main__right__field .right__field__filters .filter {
+  font-size: calc(13px + 3 * ((100vw - 375px) / 1065));
+  color: #252525;
+}
+.main .main__right__field .right__field__filters .filter__compressed {
+  display: none;
+  align-items: center;
+}
+.main .main__right__field .right__field__filters .filter__compressed .arrow_down {
+  font-family: Icons;
+  text-transform: none;
+  font-size: calc(13px + 2 * ((100vw - 375px) / 1065));
+  content: "arrow-down";
+  color: #E0BEA2;
+}
+.main .main__right__field .right__field__filters .filter__compressed .filter__title:after {
+  padding: 6px 0 9px 8px;
+  font-family: Icons;
+  text-transform: none;
+  font-size: calc(13px + 2 * ((100vw - 375px) / 1065));
+  content: "filter";
+  color: #E0BEA2;
+}
+.main .main__right__field .right__field__products {
+  margin: auto;
+}
+.main .main__right__field .right__field__products .product__cards__container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 310px);
+  grid-gap: 15px 15px;
+}
+@media (max-width: 1200px) {
+  .main .main__right__field .right__field__products .product__cards__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .main .main__right__field .right__field__products .product__cards__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.main .main__right__field .right__field__products .product {
+  position: relative;
+  overflow: hidden;
+}
+.main .main__right__field .right__field__products .product__description__panel {
+  padding: 15px 0 15px;
+  height: auto;
+}
+.main .main__right__field .right__field__products .product__description__panel div {
+  margin-bottom: 5px;
+}
+.main .main__right__field .right__field__products .product .like {
+  font-family: Icons;
+  text-transform: none;
+  right: 0;
+  position: absolute;
+  padding: 13px;
+  border-radius: 0 0 0 20px;
+  background: rgba(29, 38, 27, 0.94);
+  color: rgb(255, 255, 255);
+}
+.main .main__right__field .right__field__products .product__img img {
+  object-fit: cover;
+  width: 100%;
+}
+.main .main__right__field .right__field__products .product__name {
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}
+.main .main__right__field .right__field__products .product__name span {
+  color: #E0BEA2;
+}
+.main .main__right__field .right__field__products .product__new {
+  margin-left: 10px;
+  color: #E0BEA2;
+}
+.main .main__right__field .right__field__products .product__price {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  text-align: center;
+}
+.main .main__right__field .right__field__products .product__available__size {
+  display: flex;
+  justify-content: center;
+}
+.main .main__right__field .right__field__products .product__available__size li {
+  display: inline;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: rgba(37, 37, 37, 0.5);
+}
+.main .main__right__field .right__field__products .product__color {
+  display: flex;
+  justify-content: center;
+}
+.main .main__right__field .right__field__products .product__color li {
+  list-style: none;
+  float: left;
+  margin-right: 5px;
+}
+.main .main__right__field .right__field__products .product__color li a {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+}
+.main .main__right__field .right__field__products .product__color li a.white {
+  background: #FFFFFF;
+  border: 0.3px solid #252525;
+}
+.main .main__right__field .right__field__products .product__color li a.blue {
+  background: #6F83A4;
+}
+.main .main__right__field .right__field__products .product__color li a.yellow {
+  background: #F1DDAA;
+}
+@media (max-width: 750px) {
+  .main .filter__not__compressed {
+    display: none;
+  }
+  .main .filter__compressed {
+    margin: 0 auto;
+    display: flex !important;
+    padding: 5px 0;
+    font-size: calc(15px + 1 * ((100vw - 375px) / 1065));
+    border-bottom: 1px solid #000;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .main .main__block {
+    flex-direction: column;
+  }
+  .main .container__list__menu .catalog {
+    color: white;
+    text-align: center;
+    background-color: rgba(29, 38, 27, 0.94);
+    position: relative;
+    margin: 0 auto;
+    padding: 9px 10px !important;
+    max-width: 335px;
+  }
+  .main .container__list__menu .list li {
+    display: none;
+  }
+}
+
+/* футер */
+
+/*# sourceMappingURL=catalog.css.map */

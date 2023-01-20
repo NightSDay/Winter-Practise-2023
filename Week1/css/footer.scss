@@ -1,0 +1,88 @@
+/* футер */
+@font-face {
+  font-family: "Icons";
+  src: url("../fonts/icons.woff") format("woff");
+}
+
+$content-width: 1140px;
+$background-color: #FFFFFF ;
+$mane-dark-color: #252525;
+$font-main-title-size: 36px;
+$font-main-casual-text-size: 16px;
+
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
+.footer {
+  color: $mane-dark-color;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px;
+  .footer__column__pics{
+    font-family: Icons;
+    text-transform: none;
+    @include adaptiv-font(18,16);
+    color: #E0BEA2;
+  }
+  &__body {
+    max-width: $content-width;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    max-width: 250px;
+    width: 100%;
+    align-items: center;
+
+    &__title {
+      text-transform: uppercase;
+      line-height: 23.48px;
+      padding-bottom: 20px;
+      font-size: 20px;
+    }
+  }
+
+  &__row {
+    font-size: $font-main-casual-text-size;
+    line-height: 19px;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &__copyright {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    width: 100%;
+    margin: 50px 0 10px;
+  }
+  a{
+    text-decoration: none;
+    color: $mane-dark-color;
+  }
+  @media (max-width: 768px) {
+    .footer__container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

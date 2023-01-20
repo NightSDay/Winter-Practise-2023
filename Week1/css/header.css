@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* футер */
+@font-face {
+  font-family: "Icons";
+  src: url("../fonts/icons.woff") format("woff");
+}
+/* хедер */
+.header {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+.header .header__sub__menu {
+  font-family: Icons;
+  font-size: calc(16px + 2 * ((100vw - 375px) / 1065));
+  color: #E0BEA2;
+}
+.header .header_container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.header .nav__bar__right__corner__group {
+  overflow: hidden;
+  display: flex;
+  font-family: Icons;
+}
+.header .nav__bar__right__corner__group .container {
+  display: flex;
+}
+.header .nav__bar__right__corner__group .nav__bar__pics {
+  box-sizing: border-box;
+  position: relative;
+}
+.header .nav__bar__right__corner__group a {
+  font-family: Icons;
+  font-size: calc(16px + 2 * ((100vw - 375px) / 1065));
+  color: #E0BEA2;
+  padding: 0 8px 0 8px;
+}
+.header .nav__bar__text {
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: calc(16px + 2 * ((100vw - 375px) / 1065));
+  color: #252525;
+}
+.header .header__nav__bar {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+.header .nav__bar__language__group {
+  padding: 0 10px;
+}
+.header .nav__bar__language__group .img_sub__language__menu {
+  padding: 6px 12px 0 5px;
+}
+.header .nav__bar__language__group .nav__bar__text:after {
+  padding: 8px 9px;
+  font-family: Icons;
+  text-transform: none;
+  font-size: calc(13px + 2 * ((100vw - 375px) / 1065));
+  content: "arrow-down";
+}
+.header .nav__bar__left__corner__group a {
+  padding: 0 20px 0 0;
+}
+.header .header__main__logo {
+  width: 195px;
+  color: #E0BEA2;
+}
+.header .container__for__nav__bar {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34px 10px 34px 10px;
+}
+@media (max-width: 950px) {
+  .header .search {
+    display: none;
+  }
+  .header .class__UAH {
+    display: none;
+  }
+  .header .class__about {
+    display: none;
+  }
+  .header .class__catalog {
+    display: none;
+  }
+  .header .profile_icon {
+    display: none;
+  }
+  .header .class__new {
+    display: none;
+  }
+}
+@media (max-width: 555px) {
+  .header .group1 {
+    order: 1;
+  }
+  .header .group2 {
+    order: 2;
+  }
+  .header .group3 {
+    order: 4;
+  }
+  .header .group4 {
+    order: 3;
+  }
+  .header .group5 {
+    order: 5;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
