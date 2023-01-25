@@ -17,39 +17,39 @@
   font-size: calc(16px + 2 * ((100vw - 375px) / 1065));
   color: #E0BEA2;
 }
-.footer__body {
+.footer .footer__body {
   max-width: 1140px;
   margin: 0 auto;
   width: 100%;
   padding: 0 10px;
 }
-.footer__container {
+.footer .footer__container {
   display: flex;
   justify-content: space-between;
 }
-.footer__column {
+.footer .footer__column {
   max-width: 250px;
   width: 100%;
   align-items: center;
 }
-.footer__column__title {
+.footer .footer__column .footer__column__title {
   text-transform: uppercase;
   line-height: 23.48px;
   padding-bottom: 20px;
   font-size: 20px;
 }
-.footer__row {
+.footer .footer__row {
   font-size: 16px;
   line-height: 19px;
 }
-.footer__row li {
+.footer .footer__row li {
   margin: 10px 0;
 }
-.footer__bottom {
+.footer .footer__bottom {
   display: flex;
   margin: 0 auto;
 }
-.footer__copyright {
+.footer .footer__copyright {
   font-size: 12px;
   line-height: 14px;
   text-align: center;
@@ -62,9 +62,48 @@
 }
 @media (max-width: 768px) {
   .footer .footer__container {
+    display: block;
+    position: relative;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 20px 20px 30px;
+    overflow: hidden;
+  }
+  .footer .footer__column {
+    max-width: 100%;
+    width: 100%;
+  }
+  .footer .footer__column__title {
+    border-bottom: 1px solid #252525;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  .footer .footer__column__title span {
+    font-family: Icons;
+    text-transform: none;
+    content: "arrow-down";
+    float: right;
+  }
+  .footer .footer__row {
+    display: none;
+  }
+  .footer .footer__column.active .footer__column__title span {
+    transform: rotate(-180deg);
+    display: inline-block;
+  }
+  .footer .footer__column.active .footer__row {
+    display: block;
+  }
+  .footer .footer__column:last-of-type .footer__column__title:after {
+    content: "";
+  }
+  .footer .footer__column:last-of-type .footer__column__title {
+    border: none;
+  }
+  .footer .footer__column:last-of-type .footer__row {
+    display: block;
   }
 }
 

@@ -28,24 +28,24 @@ $maxWidth: 1440;
     @include adaptiv-font(18,16);
     color: #E0BEA2;
   }
-  &__body {
+  .footer__body {
     max-width: $content-width;
     margin: 0 auto;
     width: 100%;
     padding: 0 10px;
   }
 
-  &__container {
+  .footer__container {
     display: flex;
     justify-content: space-between;
   }
 
-  &__column {
+  .footer__column {
     max-width: 250px;
     width: 100%;
     align-items: center;
 
-    &__title {
+    .footer__column__title {
       text-transform: uppercase;
       line-height: 23.48px;
       padding-bottom: 20px;
@@ -53,7 +53,7 @@ $maxWidth: 1440;
     }
   }
 
-  &__row {
+  .footer__row {
     font-size: $font-main-casual-text-size;
     line-height: 19px;
 
@@ -62,12 +62,12 @@ $maxWidth: 1440;
     }
   }
 
-  &__bottom {
+  .footer__bottom {
     display: flex;
     margin: 0 auto;
   }
 
-  &__copyright {
+  .footer__copyright {
     font-size: 12px;
     line-height: 14px;
     text-align: center;
@@ -80,9 +80,60 @@ $maxWidth: 1440;
   }
   @media (max-width: 768px) {
     .footer__container {
+      display: block;
+      position: relative;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      padding: 20px 20px 30px;
+      overflow: hidden;
     }
+
+    .footer__column {
+      max-width: 100%;
+      width: 100%;
+
+      &__title {
+        border-bottom: 1px solid $mane-dark-color;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        span{
+          font-family: Icons;
+          text-transform: none;
+          content: "arrow-down";
+          float: right;
+        }
+      }
+
+
+    }
+
+    .footer__row {
+      display: none;
+    }
+
+    .footer__column.active {
+      .footer__column__title span {
+        transform: rotate(-180deg);
+        display: inline-block;
+      }
+      .footer__row {
+        display: block;
+      }
+    }
+
+    .footer__column:last-of-type {
+      .footer__column__title:after {
+        content: '';
+      }
+      .footer__column__title {
+        border: none;
+      }
+      .footer__row {
+        display: block;
+      }
+    }
+
   }
 }

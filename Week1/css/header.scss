@@ -63,17 +63,43 @@ $maxWidth: 1440;
   }
   .nav__bar__language__group{
     padding: 0 10px;
-    .img_sub__language__menu{
-      padding:6px 12px 0 5px;
-    }
-    .nav__bar__text:after{
+    display: flex;
+    align-items: center;
+    .nav__bar__text span{
       padding: 8px 9px;
       font-family: Icons;
       text-transform: none;
       @include adaptiv-font(15,13);
       content: "arrow-down";
     }
+    .drop-down{
+      position: relative;
+      .drop-down__row{
+        display: none;
+        position: absolute;
+        a{
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+          @include adaptiv-font(18,16);
+        }
+      }
+    }
+    .drop-down.active {
+      .nav__bar__text span {
+        transform: rotate(-180deg);
+        display: inline-block;
+      }
+      .drop-down__row {
+        display: block;
+        .item{
+          border-bottom: 1px solid #E0BEA2;
+          padding: 10px 0;
+        }
+      }
+    }
   }
+
   .nav__bar__left__corner__group{
     a{
       padding: 0 20px 0 0;
