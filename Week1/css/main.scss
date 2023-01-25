@@ -346,7 +346,9 @@ body{
     position: relative;
 
     .container {
-      display: flex;
+      display: inline-flex;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
     }
 
      .item {
@@ -385,22 +387,28 @@ body{
     }
 
      button {
-      position: absolute;
-      top: 50%;
-      width: 40px;
-      height: 40px;
-      margin-top: -20px;
-      background-color: $mane-dark-color;
+       position: absolute;
+       top: 50%;
+       width: 40px;
+       height: 40px;
+       margin-top: -20px;
+       background-color: $mane-dark-color;
        font-family: Icons;
        text-transform: none;
        color: #FFFFFF;
-    }
+       cursor: pointer;
+     }
     .next {
       right: 20px;
     }
      .prev {
-      left: 20px;
-    }
+       left: 20px;
+       display: none;
+     }
+    .prev:active {
+       left: 20px;
+       display: block;
+     }
   }
 
 
