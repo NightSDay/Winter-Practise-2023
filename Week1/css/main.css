@@ -374,11 +374,9 @@ body {
 }
 .main_content .slider__block .prev {
   left: 20px;
-  display: none;
 }
-.main_content .slider__block .prev:active {
-  left: 20px;
-  display: block;
+.main_content .slider__block .hidden {
+  display: none;
 }
 @media all and (max-width: 950px) {
   .main_content .slider__block .item {

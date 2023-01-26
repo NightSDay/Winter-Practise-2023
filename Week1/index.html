@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <script src="./JavaScript/footer_accordion.js" defer></script>
     <script src="./JavaScript/header_drop-down.js" defer></script>
-    <script src="./JavaScript/index_carousel.js" defer></script>
 </head>
 <body>
 <header class="header">
@@ -241,4 +240,56 @@
     </div>
 </footer>
 </body>
+<script>
+    // Carousel
+    (function() {
+        var carouselElement, containerElement, itemsNumber, visibleItemsNumber, leftItemIndex = 0, btnNext, btnPrev;
+        function init() {
+            carouselElement = document.querySelector('.main__gallery');
+            containerElement = carouselElement.querySelector('.container');
+            itemsNumber = containerElement.querySelectorAll('.item').length;
+
+            btnNext = carouselElement.querySelector('.next');
+            btnNext.addEventListener('click', function() { goto(-visibleItemsNumber) });
+
+            btnPrev = carouselElement.querySelector('.prev');
+            btnPrev.addEventListener('click', function() { goto(visibleItemsNumber) });
+
+            window.addEventListener('resize', reset);
+            reset();
+        }
+        function goto(step) {
+            leftItemIndex += step;
+
+            check();
+        }
+        function reset() {
+            visibleItemsNumber = getVisibleItemsNumber();
+            carouselElement.style.setProperty("--itemsWidthInPercents", (100 / visibleItemsNumber) + '%');
+            check();
+        }
+        function check() {
+            if (leftItemIndex < visibleItemsNumber - itemsNumber) {
+                leftItemIndex = visibleItemsNumber - itemsNumber;
+            }
+
+            if (leftItemIndex > 0) {
+                leftItemIndex = 0;
+            }
+
+            btnNext.classList.toggle('hidden', leftItemIndex == visibleItemsNumber - itemsNumber);
+            btnPrev.classList.toggle('hidden', leftItemIndex == 0);
+
+            containerElement.style.transform = 'translateX(' + (leftItemIndex * 100 / visibleItemsNumber) + '%)';
+        }
+        function getVisibleItemsNumber() {
+            if (document.documentElement.clientWidth > 950)
+                return 4;
+            if (document.documentElement.clientWidth > 550)
+                return 3;
+            return 2;
+        }
+        init();
+    })();
+</script>
 </html>

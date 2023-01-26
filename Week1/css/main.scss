@@ -403,12 +403,10 @@ body{
     }
      .prev {
        left: 20px;
-       display: none;
      }
-    .prev:active {
-       left: 20px;
-       display: block;
-     }
+    .hidden {
+      display: none;
+    }
   }
 
 
