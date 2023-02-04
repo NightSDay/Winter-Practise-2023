@@ -38,6 +38,9 @@
   padding-bottom: 20px;
   font-size: 20px;
 }
+.footer .footer__column .footer__column__title span {
+  display: none;
+}
 .footer .footer__row {
   font-size: 16px;
   line-height: 19px;
@@ -74,13 +77,14 @@
     max-width: 100%;
     width: 100%;
   }
-  .footer .footer__column__title {
+  .footer .footer__column .footer__column__title {
     border-bottom: 1px solid #252525;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 5px;
   }
-  .footer .footer__column__title span {
+  .footer .footer__column .footer__column__title span {
+    display: block;
     font-family: Icons;
     text-transform: none;
     content: "arrow-down";
@@ -88,6 +92,9 @@
   }
   .footer .footer__row {
     display: none;
+  }
+  .footer .footer__column.active span {
+    display: block;
   }
   .footer .footer__column.active .footer__column__title span {
     transform: rotate(-180deg);
